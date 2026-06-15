@@ -1,93 +1,183 @@
-# Customer Churn Prediction - Interconnect / Predicción de cancelación de clientes - Interconnect
+# Customer Churn Prediction — Interconnect
 
-## Project Description / Descripción del proyecto
+Machine learning project focused on predicting customer churn for **Interconnect**, a telecommunications company.
 
-This project develops a machine learning model to predict customer churn for Interconnect, a telecommunications company. The goal is to identify customers who are likely to cancel their service so the company can take preventive actions and improve customer retention.
-
-Este proyecto desarrolla un modelo de machine learning para predecir la cancelación de clientes de Interconnect, una empresa de telecomunicaciones. El objetivo es identificar clientes con alta probabilidad de cancelar el servicio para que la empresa pueda tomar acciones preventivas y mejorar la retención.
-
-## Project Scope / Alcance del proyecto
-
-This repository contains the final modeling notebook, which consolidates the main technical work of the project: data preprocessing, exploratory analysis, model training, evaluation and final model selection.
-
-Este repositorio contiene el notebook final de modelado, que consolida el trabajo técnico principal del proyecto: preprocesamiento de datos, análisis exploratorio, entrenamiento de modelos, evaluación y selección del modelo final.
-
-## Objective / Objetivo
-
-Build and evaluate classification models to predict whether a customer is likely to churn, using historical customer information, service usage and contract data.
-
-Construir y evaluar modelos de clasificación para predecir si un cliente tiene probabilidad de cancelar el servicio, utilizando información histórica del cliente, uso de servicios y datos contractuales.
-
-## Technologies Used / Tecnologías utilizadas
-
-- Python
-- pandas
-- NumPy
-- Matplotlib
-- Seaborn
-- scikit-learn
-- Jupyter Notebook
-
-## Process / Proceso realizado
-
-- Data loading and initial exploration.
-- Data cleaning and preprocessing.
-- Integration of customer, contract, internet and phone service information.
-- Exploratory data analysis.
-- Feature engineering.
-- Encoding of categorical variables.
-- Train-test split.
-- Training and comparison of classification models.
-- Model evaluation using AUC-ROC and accuracy.
-- Hyperparameter tuning with GridSearchCV.
+The goal of this project is to identify customers with a higher probability of canceling their service, allowing the business to support retention strategies through data-driven insights.
 
 ---
 
-- Carga y exploración inicial de datos.
-- Limpieza y preprocesamiento de datos.
-- Integración de información de clientes, contratos, internet y servicios telefónicos.
-- Análisis exploratorio de datos.
-- Ingeniería de características.
-- Codificación de variables categóricas.
-- División de datos en entrenamiento y prueba.
-- Entrenamiento y comparación de modelos de clasificación.
-- Evaluación del modelo mediante AUC-ROC y accuracy.
-- Ajuste de hiperparámetros con GridSearchCV.
+## Project overview
 
-## Models Evaluated / Modelos evaluados
+Customer churn is a key business problem for subscription-based companies. When customers leave, companies lose recurring revenue and often need to spend more on acquisition to replace them.
 
-- Logistic Regression
-- Random Forest
-- Gradient Boosting
-- K-Nearest Neighbors
-- Decision Tree
+This project uses historical customer, contract, internet, and phone service data to build and evaluate classification models that estimate whether a customer is likely to churn.
+
+The final model can help prioritize customers for preventive retention actions.
 
 ---
 
-- Regresión Logística
-- Random Forest
-- Gradient Boosting
-- K-Nearest Neighbors
-- Árbol de Decisión
+## Business problem
 
-## Main Results / Principales resultados
+Interconnect wants to reduce customer churn by identifying users who are at risk of canceling their service.
 
-Gradient Boosting achieved the best overall performance among the evaluated models, with an AUC-ROC close to 0.84 before optimization. After hyperparameter tuning with GridSearchCV, the final model reached an AUC-ROC close to 0.88 on the test set.
+The main analytical question is:
 
-Gradient Boosting obtuvo el mejor desempeño general entre los modelos evaluados, con un AUC-ROC cercano a 0.84 antes de la optimización. Después del ajuste de hiperparámetros con GridSearchCV, el modelo final alcanzó un AUC-ROC cercano a 0.88 en el conjunto de prueba.
+> Can customer information, contract details, and service usage data be used to predict whether a customer is likely to churn?
 
-## Main File / Archivo principal
+This type of analysis can support business teams by helping them:
+
+* Detect customers with higher churn risk.
+* Prioritize retention campaigns.
+* Understand which features are associated with churn.
+* Improve decision-making based on predictive metrics.
+
+---
+
+## Data
+
+The dataset includes information related to:
+
+* Customer profile.
+* Contract type and billing information.
+* Internet service.
+* Phone service.
+* Churn status.
+
+The data was provided as part of the TripleTen Data Science bootcamp for academic purposes.
+
+---
+
+## Tools and technologies
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Jupyter Notebook
+
+---
+
+## Project workflow
+
+The project followed a complete machine learning workflow:
+
+1. Data loading and initial exploration.
+2. Data cleaning and preprocessing.
+3. Integration of customer, contract, internet, and phone service tables.
+4. Exploratory data analysis.
+5. Feature engineering.
+6. Encoding of categorical variables.
+7. Train-test split.
+8. Model training and comparison.
+9. Evaluation using AUC-ROC and accuracy.
+10. Hyperparameter tuning with GridSearchCV.
+11. Final model selection.
+
+---
+
+## Models evaluated
+
+The following classification models were tested:
+
+* Logistic Regression
+* Decision Tree
+* Random Forest
+* K-Nearest Neighbors
+* Gradient Boosting
+
+---
+
+## Evaluation strategy
+
+The main evaluation metric was **AUC-ROC**, because the goal was to measure the model's ability to distinguish between customers who churn and customers who remain active.
+
+Accuracy was also reviewed as a complementary metric, but AUC-ROC was prioritized due to the classification nature of the business problem.
+
+---
+
+## Main results
+
+Gradient Boosting achieved the best overall performance among the evaluated models.
+
+* Best model before optimization: **Gradient Boosting**
+* AUC-ROC before optimization: approximately **0.84**
+* Final model after GridSearchCV tuning: **Gradient Boosting**
+* Final AUC-ROC on the test set: approximately **0.88**
+
+These results suggest that the model was able to capture relevant patterns associated with customer churn and can be used as a basis for customer retention analysis.
+
+---
+
+## Skills demonstrated
+
+* Data preprocessing and cleaning.
+* Integration of multiple datasets.
+* Exploratory data analysis.
+* Feature engineering.
+* Encoding categorical variables.
+* Supervised machine learning for classification.
+* Model comparison and evaluation.
+* Hyperparameter tuning with GridSearchCV.
+* Interpretation of performance metrics.
+* Business-oriented communication of model results.
+
+---
+
+## Main file
 
 The full analysis is available in the notebook:
 
-`customer_churn_prediction_interconnect.ipynb`
+```text
+customer_churn_prediction_interconnect.ipynb
+```
 
-El análisis completo se encuentra en el notebook:
+---
 
-`customer_churn_prediction_interconnect.ipynb`
+## How to run
 
-## Dataset / Conjunto de datos
+1. Clone this repository:
 
-The dataset was provided as part of the TripleTen Data Science bootcamp for academic purposes.
+```bash
+git clone https://github.com/danielpdls/customer-churn-prediction-interconnect.git
+```
 
-El conjunto de datos fue proporcionado como parte del bootcamp de Data Science de TripleTen con fines académicos.
+2. Navigate to the project folder:
+
+```bash
+cd customer-churn-prediction-interconnect
+```
+
+3. Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+4. Open the notebook:
+
+```bash
+jupyter notebook customer_churn_prediction_interconnect.ipynb
+```
+
+5. Run the notebook cells.
+
+---
+
+## Methodological note
+
+This project was developed for academic and portfolio purposes. The model results depend on the available dataset, preprocessing decisions, selected features, and evaluation strategy.
+
+In a production environment, the next steps would include additional validation, monitoring model performance over time, analyzing business costs of false positives and false negatives, and working with business teams to define retention actions.
+
+---
+
+## Author
+
+**Daniel Puente de los Santos**
+
+Data Analyst focused on business, operations, and data-driven decision-making.
+
+* GitHub: [github.com/danielpdls](https://github.com/danielpdls)
+* LinkedIn: [linkedin.com/in/danielpdls](https://www.linkedin.com/in/danielpdls)
